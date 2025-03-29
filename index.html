@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Afshar Website</title>
+</head>
+<body>
+  <h1>Welcome to Afshar Website!</h1>
+  <p>What is your name?</p>
+  <input type="text" id="nameInput" placeholder="Enter your name">
+  <button onclick="greetUser()">Submit</button>
+  <p id="greetingMessage"></p>
+
+  <script>
+    function greetUser() {
+      const name = document.getElementById('nameInput').value;
+      const greetingMessage = document.getElementById('greetingMessage');
+      if (name) {
+        greetingMessage.innerText = `You are a great person, ${name}!`;
+      } else {
+        greetingMessage.innerText = 'Please enter your name!';
+      }
+    }
+  </script>
+</body>
+</html>
